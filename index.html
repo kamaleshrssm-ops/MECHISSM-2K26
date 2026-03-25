@@ -1,429 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MECHISSM 2K26</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#020024,#0a0a2e,#000);
-color:white;
-scroll-behavior:smooth;
-}
-
-/* NAVBAR */
-
-.topbar{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,0.85);
-padding:12px 15px;
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-}
-
-.college{
-font-size:14px;
-color:#00eaff;
-max-width:60%;
-line-height:1.4;
-}
-
-.menu{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.menu a{
-text-decoration:none;
-color:white;
-font-size:13px;
-letter-spacing:1px;
-}
-
-.menu a:hover{
-color:#00eaff;
-}
-
-/* HERO */
-
-header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-header h1{
-font-family:'Orbitron',sans-serif;
-font-size:55px;
-color:#00eaff;
-text-shadow:0 0 20px #00eaff;
-}
-
-header h2{
-margin-top:10px;
-font-size:22px;
-color:#ddd;
-}
-
-/* SECTIONS */
-
-section{
-padding:80px 20px;
-text-align:center;
-}
-
-section h2{
-font-family:'Orbitron',sans-serif;
-font-size:32px;
-margin-bottom:35px;
-color:#00eaff;
-}
-
-/* CARDS */
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.card{
-background:#111;
-padding:25px;
-width:240px;
-border-radius:10px;
-cursor:pointer;
-transition:.3s;
-box-shadow:0 0 20px rgba(0,255,255,0.15);
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px #00eaff;
-}
-
-/* WORKSHOP */
-
-.workshop-card{
-margin-top:50px;
-padding:35px;
-background:linear-gradient(45deg,#00eaff,#0066ff);
-border-radius:12px;
-cursor:pointer;
-max-width:400px;
-margin-left:auto;
-margin-right:auto;
-box-shadow:0 0 30px rgba(0,255,255,0.6);
-}
-
-.workshop-card h2{
-font-family:'Orbitron',sans-serif;
-font-size:26px;
-}
-
-/* FEES */
-
-.fees-box{
-margin-top:25px;
-font-size:18px;
-line-height:1.6;
-}
-
-/* TEAM */
-
-.team{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.member{
-background:#111;
-padding:20px;
-width:240px;
-border-radius:10px;
-}
-
-/* REGISTER */
-
-.register{
-margin-top:30px;
-padding:12px 35px;
-font-size:16px;
-background:#00eaff;
-border:none;
-cursor:pointer;
-border-radius:5px;
-}
-
-/* POPUP */
-
-.popup{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-.popup-content{
-background:#111;
-padding:30px;
-max-width:400px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 0 30px #00eaff;
-}
-
-.popup-content button{
-margin-top:15px;
-padding:8px 20px;
-background:#00eaff;
-border:none;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-footer{
-background:#000;
-padding:20px;
-text-align:center;
-font-size:14px;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-header h1{
-font-size:40px;
-}
-
-header h2{
-font-size:18px;
-}
-
-.college{
-font-size:12px;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECHISSM 2K26 | SSMIET</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <style>
+        :root { --primary: #fbbf24; --secondary: #3b82f6; --bg-dark: #0f172a; }
+        body { background-color: var(--bg-dark); color: white; font-family: 'Rajdhani', sans-serif; overflow-x: hidden; }
+        .font-style { font-family: 'Orbitron', sans-serif; }
+        .gear-bg { position: fixed; top: 10%; right: -5%; font-size: 20rem; color: rgba(255, 255, 255, 0.03); animation: rotate 20s linear infinite; z-index: -1; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .gradient-text { background: linear-gradient(to right, #fbbf24, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .desc-text { display: none; margin-top: 10px; color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; }
+    </style>
 </head>
-
 <body>
 
-<div class="topbar">
-
-<div class="college">
-SSM INSTITUTE OF ENGINEERING AND TECHNOLOGY (AUTONOMOUS), DINDIGUL
-</div>
-
-<div class="menu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#events">Events</a>
-<a href="#register">Register</a>
-</div>
-
-</div>
-
-<header id="home">
-
-<h1>MECHISSM 2K26</h1>
-<h2>Department of Mechanical Engineering</h2>
-
-</header>
-
-<section id="about">
-
-<h2>About Event</h2>
-
-<p>
-
-MECHISSM 2K26 is a National Level Mechanical Symposium organized by the Department of Mechanical Engineering. 
-The event encourages innovation, technical learning and creative engineering ideas.
-
-</p>
-
-</section>
-
-<section id="events">
-
-<h2>Technical Events</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showEvent('Paper Presentation','Participants present innovative research papers.')">
-Paper Presentation
-</div>
-
-<div class="card" onclick="showEvent('CAD Master','Design mechanical components using CAD software.')">
-CAD Master
-</div>
-
-<div class="card" onclick="showEvent('Project Expo','Display innovative engineering projects.')">
-Project Expo
-</div>
-
-<div class="card" onclick="showEvent('Tech Quiz','Mechanical engineering knowledge competition.')">
-Tech Quiz
-</div>
-
-</div>
-
-<br><br>
-
-<h2>Non Technical Events</h2>
-
-<div class="cards">
-
-<div class="card" onclick="showEvent('Cinematic Quiz','Movie knowledge quiz challenge.')">
-Cinematic Quiz
-</div>
-
-<div class="card" onclick="showEvent('Theme Photography','Capture creative photos based on theme.')">
-Theme Photography
-</div>
-
-<div class="card" onclick="showEvent('JAM','Speak for one minute on random topics.')">
-JAM (Just a Minute)
-</div>
-
-<div class="card" onclick="showEvent('Meme Creation','Create funny and creative engineering memes.')">
-Meme Creation
-</div>
-
-</div>
-
-<div class="workshop-card" onclick="showEvent('Additive Manufacturing Workshop','Hands-on training on modern 3D printing and additive manufacturing technology.')">
-
-<h3>WORKSHOP</h3>
-<h2>ADDITIVE MANUFACTURING</h2>
-<p>(HAND ON TRAINING)</p>
-
-</div>
-
-<h2>Registration Fees Details</h2>
-
-<div class="fees-box">
-
-<p>Registration Fees for Events : ₹250 (Per Head)</p>
-<p>Workshop Fees : ₹450</p>
-
-</div>
-
-</section>
-
-<section id="team">
-
-<h2>Organizing Team</h2>
-
-<div class="team">
-
-<div class="member">
-<h3>Faculty Co-ordinator</h3>
-<p>Mr. C. Silambarasan</p>
-<p>Dr. M. Selwin</p>
-</div>
-
-<div class="member">
-<h3>Student Co-ordinator</h3>
-<p>YOGARAJA N</p>
-<p>KAMALESH R</p>
-</div>
-
-<div class="member">
-<h3>HOD</h3>
-<p>Dr. S. Joseph Dominic Vijayakumar</p>
-</div>
-
-<div class="member">
-<h3>Principal</h3>
-<p>Dr. D. Senthil Kumaran</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="register">
-
-<h2>Register Now</h2>
-
-<button class="register" onclick="registerNow()">Register Here</button>
-
-</section>
-
-<footer>
-
-<p>© 2026 MECHISSM 2K26</p>
-
-</footer>
-
-<div class="popup" id="popup">
-
-<div class="popup-content">
-
-<h2 id="eventTitle"></h2>
-<p id="eventDesc"></p>
-
-<button onclick="closePopup()">Close</button>
-
-</div>
-
-</div>
-
-<script>
-
-function registerNow(){
-window.open("https://docs.google.com/forms/d/e/1FAIpQLSf_X6IkNItS7EgYC6Ptqr3oD3S9mepn4xqGSajJsL0BvRtQ5Q/viewform")
-}
-
-function showEvent(title,desc){
-document.getElementById("popup").style.display="flex"
-document.getElementById("eventTitle").innerText=title
-document.getElementById("eventDesc").innerText=desc
-}
-
-function closePopup(){
-document.getElementById("popup").style.display="none"
-}
-
-</script>
-
+    <i class="fas fa-cog gear-bg"></i>
+
+    <header class="p-4 text-center border-b border-gray-800 sticky top-0 bg-slate-950 z-50">
+        <h2 class="text-xs md:text-sm font-bold tracking-widest text-blue-400 uppercase">SSM Institute of Engineering and Technology (Autonomous), Dindigul</h2>
+    </header>
+
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+        <h3 class="text-xl md:text-2xl text-gray-400 mb-2">2ND INTRO DEPARTMENT OF MECHANICAL ENGINEERING</h3>
+        <h1 class="text-6xl md:text-9xl font-bold font-style gradient-text mb-4">MECHISSM 2K26</h1>
+        
+        <div id="countdown" class="grid grid-cols-4 gap-4 mb-8 text-center">
+            <div class="glass-card p-3 rounded-lg"><span id="days" class="text-2xl font-bold block">00</span>Days</div>
+            <div class="glass-card p-3 rounded-lg"><span id="hours" class="text-2xl font-bold block">00</span>Hrs</div>
+            <div class="glass-card p-3 rounded-lg"><span id="mins" class="text-2xl font-bold block">00</span>Min</div>
+            <div class="glass-card p-3 rounded-lg"><span id="secs" class="text-2xl font-bold block">00</span>Sec</div>
+        </div>
+
+        <div class="text-lg font-bold text-amber-500 mb-2">DATE: 10.04.2026 | TIME: 9.30 AM TO 4.45 PM</div>
+        <p class="text-lg text-gray-300 max-w-2xl mb-6">
+            Welcome to the premier technical symposium of SSMIET. We provide a platform for aspiring engineers to showcase their talent, innovation, and technical prowess.
+        </p>
+    </section>
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-style text-center mb-12 border-l-4 border-amber-500 pl-4 inline-block">WORKSHOP</h2>
+        <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="toggleDesc('ws1')">
+            <div class="flex justify-between items-center">
+                <h3 class="text-2xl font-bold text-amber-400">ADDITIVE MANUFACTURING</h3>
+                <span class="bg-red-600 text-[10px] px-2 py-1 rounded">LIMITED SEATS</span>
+            </div>
+            <p id="ws1" class="desc-text">
+                Hands-on training session on Additive Manufacturing. Learn about 3D printing techniques, design optimization, and industrial applications. Participants will get practical exposure to printing technology.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-style mb-12">TECHNICAL EVENTS</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('cad')">
+                <h4 class="text-xl font-bold">CAD</h4>
+                <p id="cad" class="desc-text">Show your speed and accuracy in 3D modeling using standard CAD software.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('pp')">
+                <h4 class="text-xl font-bold">PAPER PRESENTATION</h4>
+                <p id="pp" class="desc-text">Express your technical ideas and research papers in front of the jury.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('expo')">
+                <h4 class="text-xl font-bold">PROJECT EXPO</h4>
+                <p id="expo" class="desc-text">Display your working prototypes and engineering projects.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('quiz')">
+                <h4 class="text-xl font-bold">TECHNICAL QUIZ</h4>
+                <p id="quiz" class="desc-text">A multi-round quiz testing your core mechanical engineering concepts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-style mb-12">NON TECHNICAL EVENTS</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('meme')">
+                <h4 class="text-xl font-bold">MEME CREATION</h4>
+                <p id="meme" class="desc-text">Show your humor and creativity by designing the best engineering/trending memes.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('cinematic')">
+                <h4 class="text-xl font-bold">CINEMATIC QUIZ</h4>
+                <p id="cinematic" class="desc-text">Think you know movies? Face our ultimate challenge on cinema history and facts.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('photo')">
+                <h4 class="text-xl font-bold">THEME PHOTOGRAPHY</h4>
+                <p id="photo" class="desc-text">Capture the best shots based on the theme provided on the event day.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('jam')">
+                <h4 class="text-xl font-bold">JAM (JUST A MINUTE)</h4>
+                <p id="jam" class="desc-text">Speak your heart out for one minute without hesitation or repetition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-style mb-10">REGISTRATION DETAILS</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-sm md:text-base">
+                <div class="p-6 border border-gray-700 rounded-lg">
+                    <p class="text-gray-400">Events Fees</p>
+                    <p class="text-3xl font-bold text-amber-500">₹200</p>
+                </div>
+                <div class="p-6 border border-gray-700 rounded-lg">
+                    <p class="text-gray-400">On Spot Reg</p>
+                    <p class="text-3xl font-bold text-red-500">₹250</p>
+                </div>
+                <div class="p-6 border border-gray-700 rounded-lg">
+                    <p class="text-gray-400">Workshop</p>
+                    <p class="text-3xl font-bold text-blue-500">₹400</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 border-t border-gray-800 pt-16">
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-amber-500">FACULTY CO-ORDINATOR</h3>
+                    <p>Mr. C. SILAMBARASAN | Dr. M. SELWIN</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-amber-500">STUDENT CO-ORDINATOR</h3>
+                    <p>YOGARAJA N | KAMALESH R</p>
+                </div>
+            </div>
+            <div class="md:text-right space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold">DR. S. JOSEPH DOMINIC VIJAYAKUMAR</h3>
+                    <p class="text-gray-400 uppercase">HOD</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">DR. D. SENTHIL KUMARAN</h3>
+                    <p class="text-gray-400 uppercase">Principal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 text-center bg-slate-950">
+        <h2 class="text-3xl font-style mb-8">READY TO JOIN US?</h2>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_X6IkNItS7EgYC6Ptqr3oD3S9mepn4xqGSajJsL0BvRtQ5Q/viewform?usp=header" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 text-black font-extrabold py-4 px-12 rounded-full text-xl transition-all shadow-lg hover:shadow-amber-500/50">
+            REGISTER HERE
+        </a>
+    </section>
+
+    <footer class="p-10 text-center border-t border-gray-800">
+        <div class="mb-6 flex justify-center space-x-6 text-3xl">
+            <a href="https://www.instagram.com/mechissm_2k26_?igsh=MW9iNmIzdm8wM2w3Mw==" target="_blank" class="hover:text-pink-500 transition-colors">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="text-gray-600">© 2026 MECHISSM | Department of Mechanical Engineering - SSMIET</p>
+    </footer>
+
+    <script>
+        // Countdown
+        const targetDate = new Date("April 10, 2026 09:30:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            document.getElementById('days').innerText = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+            document.getElementById('hours').innerText = Math.max(0, Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+            document.getElementById('mins').innerText = Math.max(0, Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+            document.getElementById('secs').innerText = Math.max(0, Math.floor((diff % (1000 * 60)) / 1000));
+        }, 1000);
+
+        // Toggle Description Function
+        function toggleDesc(id) {
+            const el = document.getElementById(id);
+            const isHidden = window.getComputedStyle(el).display === "none";
+            // Close others (optional - for cleaner look)
+            document.querySelectorAll('.desc-text').forEach(d => d.style.display = 'none');
+            // Toggle current
+            el.style.display = isHidden ? "block" : "none";
+        }
+
+        // Scroll Reveal
+        ScrollReveal().reveal('.glass-card', { delay: 100, distance: '30px', origin: 'bottom', interval: 50 });
+    </script>
 </body>
 </html>
