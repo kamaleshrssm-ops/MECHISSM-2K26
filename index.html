@@ -85,7 +85,7 @@
         </section>
 
         <section class="py-10">
-            <h3 class="text-4xl font-orbitron mb-8 border-l-4 border-cyan-400 pl-4 text-white">WORKSHOP</h3>
+            <h3 class="text-4xl font-orbitron mb-8 border-l-4 border-cyan-400 pl-4 text-white uppercase">Workshop</h3>
             <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="toggleDesc('ws1')">
                 <div class="flex justify-between items-center">
                     <h4 class="text-2xl font-bold text-cyan-400 uppercase font-orbitron">ADDITIVE MANUFACTURING</h4>
@@ -96,7 +96,7 @@
         </section>
 
         <section class="py-10">
-            <h3 class="text-4xl font-orbitron mb-8 text-cyan-400">TECHNICAL EVENTS</h3>
+            <h3 class="text-4xl font-orbitron mb-8 text-cyan-400 uppercase">Technical Events</h3>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="glass-card p-6 rounded-xl cursor-pointer" onclick="toggleDesc('t1')">
                     <h4 class="text-xl font-bold uppercase"><i class="fas fa-microchip mr-3 text-orange-500"></i>CAD</h4>
@@ -157,10 +157,37 @@
             </div>
         </section>
 
+        <section class="py-16 border-t border-white/5">
+            <h3 class="text-3xl font-orbitron mb-10 text-center uppercase tracking-widest text-white">Contact Us</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-xl border-l-4 border-orange-500">
+                    <h5 class="text-orange-500 font-bold mb-4 font-orbitron uppercase text-sm">Workshop Co-ordinators</h5>
+                    <p class="text-white text-lg font-bold">YOGARAJA</p>
+                    <a href="tel:+918838409622" class="text-gray-400 hover:text-cyan-400 transition-colors">88384 09622</a>
+                    <p class="text-white text-lg font-bold mt-3">ARSHATH NATHEEM</p>
+                    <a href="tel:+918668115331" class="text-gray-400 hover:text-cyan-400 transition-colors">86681 15331</a>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-l-4 border-pink-500">
+                    <h5 class="text-pink-500 font-bold mb-4 font-orbitron uppercase text-sm">Event Co-ordinators</h5>
+                    <p class="text-white text-lg font-bold">SAMPATH</p>
+                    <a href="tel:+918610407590" class="text-gray-400 hover:text-cyan-400 transition-colors">86104 07590</a>
+                    <p class="text-white text-lg font-bold mt-3">SUGUMAR</p>
+                    <a href="tel:+918524898276" class="text-gray-400 hover:text-cyan-400 transition-colors">85248 98276</a>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-l-4 border-cyan-400">
+                    <h5 class="text-cyan-400 font-bold mb-4 font-orbitron uppercase text-sm">Overall Co-ordinators</h5>
+                    <p class="text-white text-lg font-bold">YOGARAJA</p>
+                    <a href="tel:+918838409622" class="text-gray-400 hover:text-cyan-400 transition-colors">88384 09622</a>
+                    <p class="text-white text-lg font-bold mt-3">KAMALESH</p>
+                    <a href="tel:+918072005499" class="text-gray-400 hover:text-cyan-400 transition-colors">80720 05499</a>
+                </div>
+            </div>
+        </section>
+
         <section class="py-16 grid md:grid-cols-2 gap-10 border-t border-white/5">
             <div>
-                <h5 class="text-cyan-400 font-bold mb-4 font-orbitron uppercase">Co-ordinators</h5>
-                <p class="text-lg">FACULTY: Mr. C. SILAMBARASAN | Dr. M. SELWIN</p>
+                <h5 class="text-cyan-400 font-bold mb-4 font-orbitron uppercase">Staff Co-ordinators</h5>
+                <p class="text-lg">Mr. C. SILAMBARASAN | Dr. M. SELWIN</p>
                 <p class="text-lg mt-2 uppercase">STUDENT: YOGARAJA N | KAMALESH R</p>
             </div>
             <div class="md:text-right">
@@ -175,8 +202,13 @@
                class="bg-orange-500 text-black font-black py-5 px-16 rounded-full text-2xl font-orbitron hover:scale-110 transition-all shadow-[0_0_30px_rgba(249,115,22,0.4)] inline-block uppercase">
                 Register Here
             </a>
-            <div class="mt-12">
-                <a href="https://www.instagram.com/mechissm_2k26_?igsh=MW9iNmIzdm8wM2w3Mw==" target="_blank" class="text-5xl text-gray-600 hover:text-pink-500 transition-colors"><i class="fab fa-instagram"></i></a>
+            <div class="mt-12 flex justify-center items-center gap-10">
+                <a href="https://www.instagram.com/mechissm_2k26_?igsh=MW9iNmIzdm8wM2w3Mw==" target="_blank" class="text-5xl text-gray-600 hover:text-pink-500 transition-colors">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/0" target="_blank" class="text-5xl text-gray-600 hover:text-cyan-400 transition-colors">
+                    <i class="fas fa-location-dot"></i>
+                </a>
             </div>
         </section>
 
@@ -192,7 +224,7 @@
         const progressText = document.getElementById('load-percentage');
 
         const loadInterval = setInterval(() => {
-            loadPercent += Math.floor(Math.random() * 5) + 2; // Random jumps for realistic feel
+            loadPercent += Math.floor(Math.random() * 5) + 2; 
             if (loadPercent >= 100) {
                 loadPercent = 100;
                 clearInterval(loadInterval);
